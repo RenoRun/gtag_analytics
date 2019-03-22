@@ -41,6 +41,16 @@ class GoogleAnalytics {
     _sendEvent(name, options);
   }
 
+  void addToCart(String name, String category, String itemId, String itemName, int quantity, double price){
+    final options = new Options();
+    options.event_category = category;
+    options.itemId = itemId;
+    options.itemName = itemName;
+    options.quantity = quantity;
+    options.price = price;
+    _sendEvent(name, options);
+  }
+
   /// Send an exception to Google Analytics.
   void sendException(String description, {@required bool fatal}) {
     _sendEvent(

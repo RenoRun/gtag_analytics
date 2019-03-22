@@ -17,7 +17,12 @@ class Options {
       int value,
       String method,
       String description,
-      bool fatal});
+      bool fatal,
+        String itemId,
+        String itemName,
+        int quantity,
+        double price
+      });
 
   external String get description;
 
@@ -36,4 +41,20 @@ class Options {
   external int get value;
 
   external set value(int v);
+
+  external String get itemId;
+
+  external set itemId(String v);
+
+  external String get itemName;
+
+  external set itemName(String v);
+
+  external int get quantity;
+
+  external set quantity(int v);
+
+  external double get price;
+
+  external set price(double v);
 }
